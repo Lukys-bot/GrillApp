@@ -1,0 +1,296 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.introduction{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10.3vh;
+    color: white;
+}
+@keyframes changeBackground {
+    0% { background-image: url(/Projekty/Grill/Pictures/emerson-vieira-3wzps8KbdCQ-unsplash.jpg);}
+    16% { background-image: url(/Projekty/Grill/Pictures/grilled-fish.jpg); }
+    32% { background-image: url(/Projekty/Grill/Pictures/knifeAndSteak.jpg); }
+    48% { background-image: url(/Projekty/Grill/Pictures/Wings.jpg); }
+    64% { background-image: url(/Projekty/Grill/Pictures/tomahawk.jpg); }
+  
+    100% { background-image: url(/Projekty/Grill/Pictures/smoked-fishes.jpg); }
+    
+}
+.container{
+    animation: changeBackground 60s, infinite;
+  background-color: darkslategrey; 
+  background-image:url(/Projekty/Grill/Pictures/emerson-vieira-3wzps8KbdCQ-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-origin: border-box;
+  background-size: cover;
+  display: flex;
+  height: 95vh;
+  flex-direction:row;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+  animation-iteration-count: infinite;
+}
+
+.formu{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+   /* margin-top: 2%;*/
+    border: 4px;
+    border-style: outset;
+    border-radius: 8px;
+    padding: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    
+}
+.text{
+    font-size: 30px;
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+    /*margin-bottom: 4rem;*/
+    
+    
+    flex-direction: column;
+    padding-top: 10px;
+}
+button{
+    background-color: rgb(255, 94, 0);
+    padding: 10px;
+    border-radius: 16px;
+    box-shadow: 8px;
+    margin-top: 10px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+label{
+    margin-top: 20px;
+}
+.reg{
+    color:white;
+}
+.knife{
+    height: 30px; 
+}
+footer{
+    background-color: rgb(44, 61, 51);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+    margin-top: 1em;
+    
+    
+}
+.nav ul li {
+    width: 100px;
+    list-style-type: none;
+    float: center;
+   /* text-align: center;*/
+    line-height: 50px;
+    font-size: 20px;
+    flex-wrap: wrap;
+    }
+    .clear {
+        clear: both;
+      }
+    .nav ul li a{
+        color: whitesmoke;
+        text-decoration: none;
+
+    }
+    .nav ul{
+        /*width: 1020px;*/
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        /*align-items: first baseline;*/
+        flex-direction: row;
+        position: relative;
+        flex-wrap: wrap;
+    }
+.nav {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.nav ul li a:hover{
+    border-bottom: 2px solid whitesmoke;
+}
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.welcome_text{
+    font-size: 1.5em;
+    color: whitesmoke;
+    padding: 10px;
+    margin-top: 0.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+}
+.recipes {
+    /*height: auto;*/
+    color: white;
+    font-size: 2rem;
+    margin: 1rem;
+    padding: 2px; 
+    text-decoration:none;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.pages {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+.page {
+    color:black;
+    text-decoration: none;
+    margin-left: 2vh;
+    margin-right: 2vh;
+}
+#thisPage {
+    color:chocolate;
+    font-size: 1.2em;
+
+}
+.main_recipes {
+    font-size: 1rem;
+    color:whitesmoke;
+    height: 80%;
+    background-image: url(/Projekty/Grill/Pictures/GrillKureKlasika.jpg);
+    background-position: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: darkslategrey;
+    display: flex;
+    flex-direction:column;
+    flex-wrap: wrap;
+    align-content:center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 12em;
+}
+#komentare{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 80%;
+    margin-top: 10px;
+    border: 5px black;
+    align-items: center;
+    justify-content: center;
+}
+#novyKomentar{
+    width: 100%;
+    margin-bottom: 1%;
+}
+#zobrazKomentare{
+    margin-bottom: 1%;
+    margin-top: 1rem;
+    border: 2px, black;
+    padding: 1em;
+    height: auto;
+}
+#skrytyText {
+    display: none;
+    background-color: darkgrey;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    box-shadow: 4px;
+    
+}
+#skrytyText2 {
+    display: none;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 2em;
+    margin-top: 1em;
+    background-color: darkgrey;
+    border-radius: 10px;
+    padding: 1rem;
+    
+
+}
+@media only screen and (max-width: 808px){
+    .body{
+        max-height: 100%;
+    
+    }
+}
+#mainPage {
+    font-size: 10px;
+}
+.mainRecipes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    margin: auto;
+}
+.mar {
+    text-decoration: underline;
+}
+.mainRecipes a:hover{
+    border-bottom: 2px solid whitesmoke;
+    }
+    .main_recipes1 {
+        font-size: 1rem;
+        color:whitesmoke;
+        height: 80%;
+        background-image: url(/Projekty/Grill/Pictures/chickensWings.jpg);
+        background-position: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: darkslategrey;
+        display: flex;
+        flex-direction:column;
+        flex-wrap: wrap;
+        align-content:center;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 2rem;
+        padding-bottom: 12em;
+    }
+.main_recipes2 {
+    font-size: 1rem;
+    color:whitesmoke;
+    height: 80%;
+    background-image: url(/Projekty/Grill/Pictures/pork_steak.jpg);
+    background-position: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: darkslategrey;
+    display: flex;
+    flex-direction:column;
+    flex-wrap: wrap;
+    align-content:center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 12em;
+}
