@@ -14,7 +14,7 @@
         </p>
             <h2 class="form_headline">Přihlášení</h2>
             <label for="email">Zadejte svůj email</label><br>
-            <input type="email" name="email" id="email" placeholder="Email" >
+            <input type="text" name="email" id="email" placeholder="Email" >
             <?php 
             if(isset($error))
             {

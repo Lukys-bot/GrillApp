@@ -27,19 +27,19 @@ class LoginController
     }
     
     public function loginUser($data) {
-        $error = $_GET['error'] ?? null;
+        //$error = $_GET['error'] ?? null;
     
         if (isset($data['email']) && isset($data['password'])) {
             $user = $this->userModel->emailExists($data['email']);
     
-            if ($user && password_verify ($data['password'], $user['password'])) {
+            if ($user && password_verify ($data['email'], $user['password'])) {
                 // Přihlášení uživatele
                 Auth::login($user['id']);
                 return header('location: /Projekty/Grill/Introduction');
             }
         }
     
-        // Pokud se dostanete sem, znamená to, že přihlášení selhalo
+        
         $error = 'wrong_credentials';
         return View::render('login', [
             'title' => "Grill",
@@ -55,12 +55,12 @@ class LoginController
 
     public function registerUser($data)
 
-    {   $email = isset($_POST['email']) ? $_POST['email'] : null;
+    {   $email = isset($_data['email']) ? $_data['email'] : null;
 
         $user = $this->userModel->emailExists($data['email']);
 
         if ($user) {
-            //stopnu registeraci a vrátím ho zpět na registrační formulář s chybou
+            //stopnu registeraci 
             return header('location: /Projekty/TodoApp/register?error=user_exists');
         } else {
             //provedu registraci / vytvořím záznám v tabulce users 

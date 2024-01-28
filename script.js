@@ -27,7 +27,7 @@ function toggleText2(){
 document.getElementById('mainPage').addEventListener('click'
 
 , function() {
- window.location.href = 'Introduction.php'
+ window.location.href = 'Introduction.view.php'
 });
 
 
@@ -54,9 +54,6 @@ function validateEmail(email) {
 }
 
  
-/* document.getElementById("mainPage").addEventListener("click", function() {
-    console.log( "Funguje!");
-    window.location.href = "/Projekty/Grill/views/Introduction.view.php";
-});
+
 
 
