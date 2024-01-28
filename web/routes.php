@@ -1,24 +1,27 @@
 <?php
+
 use core\Router;
-//use app\controllers\commentController;
-//use app\controllers\checkUSeInDatabase;
-//use app\controllers\LoginController;
+use app\controllers\HomeController;
+use app\controllers\LoginController;
+use app\controllers\ApiCommentController;
 
 $router = new Router();
 
-//definice cest 
-$router->addRoute("/Projekty/Grill/", 'app\TestClass.php', 'index');
-$router->addRoute("/Projekty/Grill/", 'App\TestClass.php', 'index');
-$router->addRoute("/Projekty/Grill/", 'App\TestClass.php', 'index');
+$router->get('/Projekty/Grill/', HomeController::class, 'index');
+$router->get('/Projekty/Grill/login', LoginController::class, 'showLogin');
+$router->post('/Projekty/Grill/login', LoginController::class, 'loginUser');
+
+$router->post("/Projekty/Grill/register", LoginController::class, 'registerUser');
+$router->get("/Projekty/Grill/register", LoginController::class, 'ShowRegisterForm');
+$router->get("/Projekty/Grill/logout", LoginController::class, 'logout');
 
 
 
-$currentUrl = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
-echo "<pre>";
-//var_dump($router->routes);
-var_dump($currentUrl);
-echo "</pre>";
+//zjištění na jaké adrese 
+$currentUrl = $_SERVER['REQUEST_METHOD'] . $_SERVER['REQUEST_URI'];
+$currentUrl = parse_url($currentUrl)['path'];
 
-$router->dispatch($currentUrl);
+
+$router->najdi_adresu($currentUrl);
 

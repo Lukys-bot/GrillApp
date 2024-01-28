@@ -31,12 +31,24 @@
                 <li>Dobrou chuť</li>
             </ul>
     </main>
-      <div method="post" id="komentare">
+      <div  method="post" id="komentare">
         <h3>Komentáře:</h3>
             <textarea  id="novyKomentar()" maxlength="400" placeholder="Vaše poznatky a nápady." required></textarea>
-            <button type="submit" onclick="addComment()">Přidat komentář</button>
+            <button autofocus id="new_comment" onclick="addComment()">Přidat komentář</button>
             
+            
+<form action="<?php echo $_SERVER["grill"]; ?>">
+    
+    Komentář: <textarea name="comment_text"></textarea><br>
+    <input autofocus id="new_comment" onclick="addComment()" type="submit" value="Přidat komentář">
+</form>
+            
+
+        
+     
+
       </div>
+      <?php echo $user_id ?>
       <div id="zobrazKomentare"></div>
 <?php include __DIR__."/partials/footer.php"; ?>
 <script src="/Projekty/Grill/script.js"></script>

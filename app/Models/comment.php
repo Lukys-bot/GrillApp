@@ -1,16 +1,24 @@
 <?php
 
-namespace app\Models;
+namespace App\Models;
 
-use core\view;
+use Core\Model;
+use PDOStatement;
 
-class comment
+class comment extends Model
 {
-    public function showComments()
-    {
-          //$comments = comment::allComments();
+    protected $table = 'comments';
 
-          //return view::render($viewName);
-        
+   
+
+    public function create($values): PDOStatement
+    {
+        return $this->database->query("INSERT INTO $this->table (title, description, user_id) VALUES (?, ?, ?, ?)", $values);
+    }
+
+   
+    public function delete($comment_id)
+    {
+        return $this->database->query("DELETE FROM $this->table WHERE id = $comment_id");
     }
 }

@@ -135,6 +135,11 @@ footer{
     display: table;
     clear: both;
 }
+.error-message {
+    color:yellow;
+}
+
+
 .welcome_text{
     font-size: 1.5em;
     color: whitesmoke;
@@ -144,6 +149,14 @@ footer{
     margin-right: auto;
     margin-bottom: 1rem;
 }
+.form__error-message{
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: red;
+}
+
+
 .recipes {
     /*height: auto;*/
     color: white;
@@ -201,6 +214,7 @@ footer{
     border: 5px black;
     align-items: center;
     justify-content: center;
+    height: auto;
 }
 #novyKomentar{
     width: 100%;
@@ -213,6 +227,9 @@ footer{
     padding: 1em;
     height: auto;
 }
+
+
+
 #skrytyText {
     display: none;
     background-color: darkgrey;

@@ -1,12 +1,16 @@
 <?php
-namespace core;
 
-class view
+namespace Core;
 
+class View
 {
-    public static function render($viewName)
+    public static function render($viewName, $data = null)
     {
-        require_once "Projekty/Grill/views/". $viewName . ".php";
+        foreach ($data ?? [] as $variable_name => $variable) {
+            $variable_name = $variable_name;
+            $$variable_name = $variable;
+        }
 
+        require_once "views/" . $viewName . ".view.php";
     }
 }
