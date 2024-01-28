@@ -24,11 +24,11 @@ function toggleText2(){
     }
 }
 
-/*document.getElementById('mainPage').addEventListener('click'
+document.getElementById('mainPage').addEventListener('click'
 
 , function() {
  window.location.href = 'Introduction.php'
-});*/
+});
 
 
 //
@@ -47,10 +47,16 @@ function validateEmail(email) {
         emailInput.style.border = '2px solid green';
         emailError.textContent = '';
     } else {
-        // Neplatná e-mailová adresa
+        // špatná e-mailová adresa
         emailInput.style.border = '2px solid red';
         emailError.textContent = 'napište správnou emailovou adresu';
     }
 }
+
+ 
+/* document.getElementById("mainPage").addEventListener("click", function() {
+    console.log( "Funguje!");
+    window.location.href = "/Projekty/Grill/views/Introduction.view.php";
+});
 
 

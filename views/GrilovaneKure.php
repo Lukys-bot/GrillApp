@@ -37,18 +37,13 @@
             <button autofocus id="new_comment" onclick="addComment()">Přidat komentář</button>
             
             
-<form action="<?php echo $_SERVER["grill"]; ?>">
-    
-    Komentář: <textarea name="comment_text"></textarea><br>
-    <input autofocus id="new_comment" onclick="addComment()" type="submit" value="Přidat komentář">
-</form>
-            
+ 
 
         
      
 
       </div>
-      <?php echo $user_id ?>
+      
       <div id="zobrazKomentare"></div>
 <?php include __DIR__."/partials/footer.php"; ?>
 <script src="/Projekty/Grill/script.js"></script>
