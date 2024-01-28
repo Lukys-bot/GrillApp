@@ -22,11 +22,11 @@
             
             
             <label for="password"¨>Zadejte Vaše heslo</label><br>
-            <input type="text" id="password"  placeholder="password">
+            <input type="password" id="password"  placeholder="password">
          
 
             <label for="password2"¨>Zadejte znovu Vaše heslo</label><br>
-            <input type="text" id="password2"  placeholder="password">
+            <input type="password" id="password"  placeholder="password">
             
             
             <button type="submit" id=" button_registration"> Registrace...</button>

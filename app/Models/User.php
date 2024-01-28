@@ -6,6 +6,9 @@ use Core\Model;
 
 class User extends Model
 {   
+    
+
+
     protected $table = "users";
     
     public function create($data)
@@ -20,6 +23,6 @@ class User extends Model
     {
         $email = isset($_POST['email']) ? $_POST['email'] : null;
 
-       return $this->database->query("SELECTED * FROM $this->table WHERE EMAIL = '$email'");
+        return $this->database->query("select * from $this->table where email = '$email'");
     }
 }

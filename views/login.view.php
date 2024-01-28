@@ -14,7 +14,7 @@
         </p>
             <h2 class="form_headline">Přihlášení</h2>
             <label for="email">Zadejte svůj email</label><br>
-            <input type="text" name="email" id="email" placeholder="Email" autofocus>
+            <input type="email" name="email" id="email" placeholder="Email" >
             <?php 
             if(isset($error))
             {
@@ -26,7 +26,7 @@
             <span id="emailError" class="error-message"></span>
             
             <label for="password"¨>Zadejte Vaše heslo</label><br>
-            <input type="text" name="password" id="password"  placeholder="password" autofocus>
+            <input type="password" name="password" id="password"  placeholder="password">
             
             
             <button type="submit" id=" button_login"> Přihlásit se...</button>

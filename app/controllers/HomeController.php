@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-session_start();
+
 use Core\View;
 
 class HomeController 
@@ -20,7 +20,7 @@ class HomeController
         else{
             //pokud ne tak ho přesměruj na login formulář 
             return header('location: /Projekty/Grill/login');
-            echo"Nečum";
+            echo":-(";
         }
     }
 }

@@ -10,39 +10,47 @@ class LoginController
 {
     public user $userModel;
 
-    
+    public $errors =  [
+        "wrong_credentials" => "Špatné přihlašovací údaje",
+       ];
+
 
     public function __construct()
     {
         $this->userModel = new user();
     }
 
-    public function showLogin()
+  public function showLogin()
     {
         return View::render('login',[
         'title' => "Přihlášení",]);
     }
     
-   
     public function loginUser($data) {
         $error = $_GET['error'] ?? null;
     
         if (isset($data['email']) && isset($data['password'])) {
             $user = $this->userModel->emailExists($data['email']);
     
-            if ($user && password_verify($data['password'], $user['password'])) {
+            if ($user && password_verify ($data['password'], $user['password'])) {
                 // Přihlášení uživatele
                 Auth::login($user['id']);
                 return header('location: /Projekty/Grill/Introduction');
-            } else {
-                $error = 'wrong_credentials';
             }
         }
-     /*
+    
+        // Pokud se dostanete sem, znamená to, že přihlášení selhalo
+        $error = 'wrong_credentials';
         return View::render('login', [
             'title' => "Grill",
-           ]);
+            'error' => $error,
+        ]);
     }
+    
+   
+  
+     
+       
     
 
     public function registerUser($data)
@@ -56,7 +64,7 @@ class LoginController
             return header('location: /Projekty/TodoApp/register?error=user_exists');
         } else {
             //provedu registraci / vytvořím záznám v tabulce users 
-            $this->userModel->create($data);
+            $this->userModel->create($data['email'] , ['password']);
             $registered_user = $this->userModel->emailExists($data['email']);
             Auth::login($registered_user['id']);
             
@@ -65,7 +73,7 @@ class LoginController
         }
     }
 
-     function showRegisterForm(): View
+    function showRegisterForm(): View
     {
         $error = $_GET['error'] ?? null;
 
@@ -75,11 +83,10 @@ class LoginController
         ]);
     }
 
-   /* public function logout()
+    public function logout()
     {
         Auth::logout();
         return header('location: /Projekty/Grill/');
-    }*/
+    }
+
 }
-
-

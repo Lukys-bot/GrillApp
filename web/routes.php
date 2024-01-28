@@ -18,6 +18,8 @@ $router->get("/Projekty/Grill/logout", LoginController::class, 'logout');
 
 
 
+
+
 //zjištění na jaké adrese 
 $currentUrl = $_SERVER['REQUEST_METHOD'] . $_SERVER['REQUEST_URI'];
 $currentUrl = parse_url($currentUrl)['path'];
