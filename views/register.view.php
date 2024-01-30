@@ -9,7 +9,7 @@
         <form class="formu" action="/Projekty/Grill/register" method="post">
             <h2 class="form_headline">Registrace</h2>
             <label for="email">Zadejte svůj email</label><br>
-            <input type="email" id="email" placeholder="email">
+            <input name="email" type="email" id="email" placeholder="email">
             <span id="emailError" class="error-message"></span>
             <?php 
             if(isset($error))
@@ -22,7 +22,7 @@
             
             
             <label for="password"¨>Zadejte Vaše heslo</label><br>
-            <input type="password" id="password"  placeholder="password">
+            <input name="password" type="password" id="password"  placeholder="password">
          
 
             <label for="password2"¨>Zadejte znovu Vaše heslo</label><br>

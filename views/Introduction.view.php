@@ -18,6 +18,7 @@
                 </ul>
             <div class="clearfix"></div>
         </div>
+        <a class="button-logout" href="/Projekty/Grill/logout">Odhlásit se</a>
         <p class="welcome_text">
             Předávám dál recepty, které má moje rodina ráda.
             Vyberte si dle svého gusta, nechte se inspirovat a 

@@ -3,6 +3,7 @@
 namespace Core;
 
 use Core\Database;
+use Core\Mysql;
 
 class Model
 {
@@ -23,6 +24,7 @@ class Model
 
     public function find(int $id): array
     {
-        return $this->database->query("SELECT * FROM $this->table where id = $id");
+       return $this->database->query("SELECT * FROM $this->table where id = $id");
+     
     }
 }

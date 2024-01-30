@@ -16,7 +16,7 @@ class Database
         $db   = DB_DATABASE;
         $user = DB_USERNAME;
         $pass = DB_PASSWORD;
-        $charset = 'utf8';
+        $charset = 'utf8mb4';
 
         $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
 

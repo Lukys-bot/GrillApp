@@ -12,17 +12,24 @@ class User extends Model
     protected $table = "users";
     
     public function create($data)
-    {
-        $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT );
+    {   
 
+
+        //$data['password'] = password_hash($data['password'], PASSWORD_DEFAULT );
+        
         return $this->database->query("INSERT INTO $this->table (email, password)
         VALUES (?, ?)", $data);
     }
     
     public function emailExists($email)
     {
-        $email = isset($_POST['email']) ? $_POST['email'] : null;
+        
 
-        return $this->database->query("select * from $this->table where email = '$email'");
+        return $this->database->query("select * from $this->table where email = '$email'")[0];
+    }
+    public function exist($data)
+
+    {
+        return $this->database->query(" SELECT * FROM users where email = email and password = password ")[0];
     }
 }

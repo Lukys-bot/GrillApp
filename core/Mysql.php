@@ -23,7 +23,7 @@ class Mysql
         }
     }
 
-    public function dotaz(String $query, $values = null): array
+    public function query(String $query, $values = null): array
     {
         $result = $this->connection->query($query);
         return $result->fetch_all(MYSQLI_ASSOC);
